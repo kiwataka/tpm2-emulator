@@ -10,7 +10,7 @@ private:
 public:
     void PCR_Extend(int index, const uint8_t* data, size_t len) {
         if (index < 24) {
-            // Simple hash simulation
+            
             for (size_t i = 0; i < len; ++i) {
                 pcr[index] = (pcr[index] << 8) ^ data[i];
             }
